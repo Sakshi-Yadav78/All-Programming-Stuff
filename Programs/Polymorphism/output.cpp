@@ -4,9 +4,9 @@ using namespace std;
 int main()
 {
 	unsigned int x = 3;
-	while (x --> =0)
+	while (x --> = 0)
 	{
-		cout<<x;
+		cout << x;
 	}
 	return 0;
 }
