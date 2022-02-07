@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <conio.h>
-#include <unistd.h>
+#include <unistd.h>  //defines miscellaneous symbolic constants and types, and declares miscellaneous functions
 
 int main()
 {
@@ -8,7 +8,7 @@ int main()
 	while(1){
 		printf("\r\t%.2d HOURS: %.2d MINUTES: %.2d SECONDS: %.2d", hours, minutes, 
 	          seconds,milliseconds); 
-			usleep(1000);
+			usleep(1000);  //API that suspends the current process for the number of microseconds passed to it. 
 			++milliseconds;
 	    if(milliseconds == 999){
 		   milliseconds = 0;
