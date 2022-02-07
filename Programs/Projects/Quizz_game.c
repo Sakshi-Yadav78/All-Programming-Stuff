@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <conio.h>
-#include <ctype.h>
+#include <ctype.h> //useful for testing and mapping characters.
 
 int main()
 {
