@@ -22,7 +22,7 @@ int main()
 		    printf(" \n Go ");
 			break;
 		default:
-		     printf("! Sorry wrong choice");
+		     printf(" Sorry wrong choice! ");
 	}
 
 }
