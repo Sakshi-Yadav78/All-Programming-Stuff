@@ -98,7 +98,6 @@ void registration(void)
     printf("\nEnter Surname:\n");
     scanf("%s",l.lname);
 
-
     printf("Thank you.\nNow please choose a username and password as credentials for system login.\nEnsure the username is no more than 30 characters long.\nEnsure your password is at least 8 characters long and contains lowercase, uppercase, numerical and special character values.\n"); 
 
     printf("\nEnter Username:\n");
