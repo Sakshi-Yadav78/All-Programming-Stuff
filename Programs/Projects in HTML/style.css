@@ -38,19 +38,42 @@ body{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-}
-form .user-details.input-box{
 	margin: 20px 0 12px 0;
+}
+form.user-details .input-box{
+	margin-bottom: 15px;
 	width: calc(100% / 2 - 20px);
 }
-.user-details.input-box.details{
+.user-details .input-box .details{
 	display: block;
 	font-weight: 500;
 	margin-bottom: 5px;
 }
-.user-details.input-box.input{
+.user-details .input-box input{
 	height: 45px;
     width: 100%;
 	outline: none;
 	border-radius: 5px;
+	border: 1px solid #ccc;
+	padding-left: 15px;
+	font-size: 16px;
+    border-bottom-width: 2px;
+	transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+	border-color: #9b59b6;
+}
+form .gender-details .gender-title{
+	font-size: 20px;
+	font-weight: 500;
+}
+form .gender-details .category{
+	display: flex;
+	width: 80%;
+	margin: 14px 0;
+	justify-content: space-between;
+}
+.gender-details .category label{
+	
 }
