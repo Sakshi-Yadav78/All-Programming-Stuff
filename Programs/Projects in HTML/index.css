@@ -23,36 +23,6 @@ body{
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   perspective: 2700px;
 }
-.container .cover{
-  position: absolute;
-  top: 0;
-  left: 50%;
-  height: 100%;
-  width: 50%;
-  z-index: 98;
-  transition: all 1s ease;
-  transform-origin: left;
-  transform-style: preserve-3d;
-}
-.container .cover::before{
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: #72dae8;
-  opacity: 0.5;
-  z-index: 100;
-}
-.container #flip:checked ~ .cover{
-  transform: rotateY(-180deg);
-}
-.container .cover img{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: 12;
-}
 .container form{
   height: 100%;
   width: 100%;
