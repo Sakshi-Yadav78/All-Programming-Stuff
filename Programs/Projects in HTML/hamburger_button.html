@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login Regesteration Form</title>
+		<link rel="stylesheet" href="ham.css" />
+		<!-- Boxicons link -->
+		<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+	</head>
+<body>
+	<div class="box">
+		<div class="icon">
+			<i class='bx bx-menu open'></i>
+			<i class='bx bx-x close'></i>
+		</div>
+		<div class="icon">
+			<i class='bx bx-menu open'></i>
+			<i class='bx bx-list-ul close'></i>
+		</div>
+		<div class="icon">
+			<i class='bx bx-grid-alt open'></i>
+		    <i class='bx bx-x close'></i>
+		</div>
+		<div class="icon">
+			<i class='bx bx-menu open'></i>
+			<i class='bx bx-menu-alt-right close'></i>
+		</div>
+		<div class="icon">
+			<i class='bx bx-menu open'></i>
+			<i class='bx bx-x close'></i>
+		</div>
+	</div>
+
+	<script>
+		let icons = document.querySelectorAll(".icon");
+
+		for (var i = 0; i < icons.length; i++) {
+			icons[i].addEventListener("click", (e)=>{
+				let target = e.target
+				target.classList.toggle("active");
+			});
+		}
+		</script>
+</body>
+</html>
