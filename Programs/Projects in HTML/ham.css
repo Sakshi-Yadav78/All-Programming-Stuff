@@ -34,6 +34,9 @@ body{
 .box .icon.active{
   background:#FF676D;
 }
+.box .icon.line.active{
+  background:#fff;
+}
 .box .icon i{
   position: absolute;
   top: 50%;
@@ -47,9 +50,16 @@ body{
 .box .icon.active i{
   color: #fff;
 }
+.box .icon.line.active i{
+  color: #333;
+}
 .box .icon.active i.open{
    opacity: 0;
    transform: translate(-50%, -50%)rotate(180deg);
+}
+.box .icon.line.active i.open{
+   opacity: 0;
+   transform: translate(-50%, -50%)rotate(0deg);
 }
 .box .icon i.close{
   opacity: 0; 
@@ -57,4 +67,8 @@ body{
 .box .icon.active i.close{
   opacity: 1; 
   transform: translate(-50%, -50%)rotate(180deg);
+}
+.box .icon.line.active i.close{
+  opacity: 1; 
+  transform: translate(-50%, -50%)rotate(0deg);
 }
