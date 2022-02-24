@@ -4,9 +4,17 @@
 	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
 	"version": "0.2.0",
 	"configurations": [
+		
+		{
+			"type": "cppdbg",
+			"name": "Launch Rectarea",
+			"request": "launch",
+			"mainClass": "Rectarea",
+			"projectName": "Programs_8c60a443"
+		},
 		{
 			"name": "gcc.exe - Build and debug active file",
-			"type": "cppdbg",
+			"type": "node",
 			"request": "launch",
 			"program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
 			"args": [],
