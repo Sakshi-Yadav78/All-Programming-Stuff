@@ -21,7 +21,7 @@ const append = (message, position) => {
 }
 
 //If the form gets submitted, send server the message
-form.addEventListener('submit', () => {
+form.addEventListener('submit', (e) => {
 	e.preventDefault();
 	const message = messageInput.value;
 	append(`You: ${message}`, 'right');
