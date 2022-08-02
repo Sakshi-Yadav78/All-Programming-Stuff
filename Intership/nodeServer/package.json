@@ -1,18 +1,17 @@
 {
   "name": "nodeserver",
   "version": "1.0.0",
-  "description": "Server side JS code for the app",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "author": "Sakshi",
-  "license": "MIT",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "socket.io": "^4.5.1"
+    "cors": "^2.8.5",
+    "nodemon": "^2.0.19",
+    "socketio": "^1.0.0"
   }
 }

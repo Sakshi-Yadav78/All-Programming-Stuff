@@ -1,25 +1,26 @@
-//Node server which will handle socket io connections
+
+// Node Server to handle socket io connections
 const io = require('socket.io')(8000)
-
 const users = {};
-io.on('connection', socket => {
-	//If any new user joins , let other usersconnected to the server know!
-	socket.on("new-user-joined", (name) => {
-		users[socket.id] = name;
-		socket.broadcast.emit("user-joined", name);
-	});
 
-	//If someone sends a message, brodcast it to other people
-	socket.on("send", (message) => {
-		socket.broadcast.emit("receive", {
-			message: message,
-			name: users[socket.id],
-		});
-	});
+io.on('connection', socket =>{
+      socket.on('new-user-joined', name=>{
+         //console.log("New user", name);
+        const transport = socket.conn.transport.name; // in most cases, "polling"
+        users[socket.id] = name;
+        socket.broadcast.emit('user-joined', name);
 
-	//If someone leaves the chat , let other's know!
-	socket.on("disconnect", (message) => {
-		socket.broadcast.emit("left", users[socket.id]);
-		delete users[socket.id];
-	});
+        socket.conn.on("upgrade", () => {
+          const upgradedTransport = socket.conn.transport.name; // in most cases, "websocket"
+        });
+    });
+
+    socket.on('send', message =>{
+        socket.broadcast.emit('receive', {message: message, name: users[socket.id]})
+    });
+
+    socket.on('disconnect', message =>{
+        socket.broadcast.emit('left', users[socket.id]);
+        delete users[socket.id];
+    });
 })
